@@ -1,24 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.css";
+import "./App.css";
+
+import { Container, Navbar, Nav } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  let navigate = useNavigate();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="tae">
+        <Navbar bg="light" varian="light">
+          <Container>
+            <Navbar.Brand href="#home">indiOcean</Navbar.Brand>
+            <Nav className="me-auto">
+              <Nav.Link
+                onClick={() => {
+                  navigate("/");
+                }}
+              >
+                Home
+              </Nav.Link>
+            </Nav>
+          </Container>
+        </Navbar>
+      </div>
+      <section>
+        <div>
+          <h1>New Popular Songs</h1>
+        </div>
+        <div>{/* here goes the lists */}</div>
+      </section>
+      <section>
+        <div>
+          <h1>Genre 1</h1>
+        </div>
+        <div>{/* here goes the lists */}</div>
+      </section>
+      <section>
+        <div>
+          <h1>Genre 2</h1>
+        </div>
+        <div>{/* here goes the lists */}</div>
+      </section>
+    </>
   );
 }
 
