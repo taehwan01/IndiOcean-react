@@ -1,8 +1,8 @@
 import "bootstrap/dist/css/bootstrap.css";
 import { Container, Navbar, Nav } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
-import List from './components/List'
+import List from "./components/List";
 
 function App() {
   let navigate = useNavigate();
@@ -28,9 +28,19 @@ function App() {
           </Container>
         </Navbar>
       </div>
-      <List></List>
-      <List></List>
-      <List></List>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div>
+              <List></List>
+              <List></List>
+              <List></List>
+            </div>
+          }
+        ></Route>
+        <Route path="/playlist" element={<></>}></Route>
+      </Routes>
     </>
   );
 }
