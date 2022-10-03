@@ -4,6 +4,7 @@ import { Container, Navbar, Nav } from "react-bootstrap";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import "./css/App.css";
 import Main from "./routes/Main";
+import Add from "./routes/Add";
 
 function App() {
   let navigate = useNavigate();
@@ -42,6 +43,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main></Main>}></Route>
         <Route path="/playlist" element={<></>}></Route>
+        <Route path="/add" element={<Add></Add>}></Route>
       </Routes>
     </div>
   );

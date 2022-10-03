@@ -3,10 +3,8 @@ import Track from "./Track";
 function List() {
   return (
     <>
-      <section>
-        <div>
-          <h1>Playlist Name</h1>
-        </div>
+      <div className="list">
+        <h1>Playlist Name</h1>
         <div className="row">
           <Track></Track>
           <Track></Track>
@@ -15,8 +13,8 @@ function List() {
           <Track></Track>
           <Track></Track>
         </div>
-        <hr />
-      </section>
+        <hr style={{ "margin-top": "5px" }} />
+      </div>
     </>
   );
 }
