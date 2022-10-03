@@ -1,14 +1,17 @@
 import "bootstrap/dist/css/bootstrap.css";
+import { useEffect } from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import "./App.css";
-import List from "./components/List";
+import "./css/App.css";
+import Main from "./routes/Main";
 
 function App() {
   let navigate = useNavigate();
 
+  useEffect(() => {}, []);
+
   return (
-    <div style={{ "background-color": "white" }}>
+    <div style={{ "background-color": "#e9e9e9" }}>
       <div class="nav-bg">
         <Navbar>
           <Container>
@@ -24,30 +27,20 @@ function App() {
               >
                 Home
               </Nav.Link>
+              <Nav.Link
+                className="navimenu"
+                onClick={() => {
+                  navigate("/add");
+                }}
+              >
+                Add
+              </Nav.Link>
             </Nav>
           </Container>
         </Navbar>
       </div>
-      <div className="main">
-        <div className="row">
-          <div className="col-5 main-text">
-            <h1> Welcome to indiOcean</h1>
-            <h4>Surf in to your flavor</h4>
-          </div>
-          <div className="col-7 wave-img"></div>
-        </div>
-      </div>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              <List></List>
-              <List></List>
-              <List></List>
-            </div>
-          }
-        ></Route>
+        <Route path="/" element={<Main></Main>}></Route>
         <Route path="/playlist" element={<></>}></Route>
       </Routes>
     </div>
