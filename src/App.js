@@ -8,8 +8,8 @@ function App() {
   let navigate = useNavigate();
 
   return (
-    <>
-      <div>
+    <div style={{ "background-color": "white" }}>
+      <div class="nav-bg">
         <Navbar>
           <Container>
             <Navbar.Brand href="#home" className="navi">
@@ -28,6 +28,15 @@ function App() {
           </Container>
         </Navbar>
       </div>
+      <div className="main">
+        <div className="row">
+          <div className="col-5 main-text">
+            <h1> Welcome to indiOcean</h1>
+            <h4>Surf in to your flavor</h4>
+          </div>
+          <div className="col-7 wave-img"></div>
+        </div>
+      </div>
       <Routes>
         <Route
           path="/"
@@ -41,7 +50,7 @@ function App() {
         ></Route>
         <Route path="/playlist" element={<></>}></Route>
       </Routes>
-    </>
+    </div>
   );
 }
 
