@@ -1,0 +1,11 @@
+.add {
+  background-color: #87aaaa;
+  color: white;
+  padding: 23vh;
+  display: grid;
+  justify-content: center;
+}
+
+.info-pad {
+  margin-bottom: 18px;
+}
