@@ -5,7 +5,7 @@ function Add() {
   return (
     <div className="add">
       <div className="row">
-        <div className="col-6 show">
+        <div className="col-6">
           <Track></Track>
         </div>
         <div className="col-6 add-info">

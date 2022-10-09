@@ -1,7 +1,7 @@
 function Track() {
   return (
     <>
-      <div className="track col-2">
+      <div className="track">
         <div className="track-box"></div>
         <br />
         <div className="track-info">
