@@ -1,12 +1,15 @@
 import "../css/Add.css";
-import Track from "../components/Track";
+import AddTrack from "../components/AddTrack";
+
+import { useEffect, useState } from "react";
 
 function Add() {
+  let [info, setInfo] = useState({ title: "monteTrack Name", artist_name: "monteArtist Name", cover_image: "../img/wave.png" });
   return (
     <div className="add">
       <div className="row">
         <div className="col-6">
-          <Track></Track>
+          <AddTrack info={info}></AddTrack>
         </div>
         <div className="col-6 add-info">
           <h2 style={{ "margin-bottom": "40px" }}>Add your music</h2>
