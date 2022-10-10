@@ -4,28 +4,54 @@ import AddTrack from "../components/AddTrack";
 import { useEffect, useState } from "react";
 
 function Add() {
-  let [info, setInfo] = useState({ title: "monteTrack Name", artist_name: "monteArtist Name", cover_image: "../img/wave.png" });
+  let [title, setTitle] = useState("Track Name");
+  let [artist, setArtist] = useState("Artist Name");
+  let [cover, setCover] = useState("../img/wave.png");
+
+  const preview = function (file) {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    return new Promise((res) => {
+      reader.onload = () => {
+        setCover(reader.result);
+        res();
+      };
+    });
+  };
+
   return (
     <div className="add">
       <div className="row">
         <div className="col-6">
-          <AddTrack info={info}></AddTrack>
+          <AddTrack title={title} artist={artist} cover={cover}></AddTrack>
         </div>
         <div className="col-6 add-info">
-          <h2 style={{ "margin-bottom": "40px" }}>Add your music</h2>
+          <h2 style={{ marginBottom: "40px" }}>Add your music</h2>
           <div className="row">
             <div className="col-4">
               <h5>Title</h5>
             </div>
             <div className="col-8">
-              <input placeholder="Title" className="info-pad"></input>
+              <input
+                placeholder="Title"
+                className="info-pad"
+                onChange={(e) => {
+                  setTitle(e.target.value);
+                }}
+              ></input>
             </div>
             <br />
             <div className="col-4">
               <h5>Artist Name</h5>
             </div>
             <div className="col-8">
-              <input placeholder="Artist Name" className="info-pad"></input>
+              <input
+                placeholder="Artist Name"
+                className="info-pad"
+                onChange={(e) => {
+                  setArtist(e.target.value);
+                }}
+              ></input>
             </div>
             <br />
             <div className="col-4">
@@ -39,11 +65,17 @@ function Add() {
               <h5>Cover Image</h5>
             </div>
             <div className="col-8">
-              <input type={"file"} className="info-pad"></input>
+              <input
+                type={"file"}
+                className="info-pad"
+                onChange={(e) => {
+                  preview(e.target.files[0]);
+                }}
+              ></input>
             </div>
             <br />
           </div>
-          <button style={{ "margin-top": "10px" }}>Add</button>
+          <button style={{ marginTop: "10px" }}>Add</button>
         </div>
       </div>
     </div>

@@ -12,8 +12,8 @@ function App() {
   useEffect(() => {}, []);
 
   return (
-    <div style={{ "background-color": "#e9e9e9" }}>
-      <div class="nav-bg">
+    <div style={{ backgroundColor: "#e9e9e9" }}>
+      <div className="nav-bg">
         <Navbar>
           <Container>
             <Navbar.Brand href="#home" className="navi">

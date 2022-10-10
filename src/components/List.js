@@ -13,7 +13,7 @@ function List() {
           <Track></Track>
           <Track></Track>
         </div>
-        <hr style={{ "margin-top": "5px" }} />
+        <hr style={{ marginTop: "5px" }} />
       </div>
     </>
   );
