@@ -1,7 +1,7 @@
 import List from "../components/List";
 import "../css/Main.css";
 
-function Main() {
+function Main(props) {
   return (
     <div>
       <div className="main">
@@ -14,9 +14,9 @@ function Main() {
         </div>
       </div>
       <div className="main2">
-        <List></List>
-        <List></List>
-        <List></List>
+        <List list={props.list}></List>
+        {/* <List></List>
+        <List></List> */}
       </div>
     </div>
   );
