@@ -3,8 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 let track = createSlice({
   name: "Tracks",
   initialState: [],
-  reducers: {},
+  reducers: {
+    addTrack(state, action) {
+      state.push(action.payload);
+    },
+  },
 });
 
-// export let { addCart, addCount } = items.actions;
-export default Tracks;
+export const { addTrack } = track.actions;
+
+export default track;
