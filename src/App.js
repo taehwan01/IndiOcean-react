@@ -7,6 +7,7 @@ import axios from "axios";
 import "./css/App.css";
 import Main from "./routes/Main";
 import Add from "./routes/Add";
+import Player from "./routes/Player";
 
 function App() {
   let navigate = useNavigate();
@@ -55,8 +56,9 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<Main list={list}></Main>}></Route>
-        <Route path="/playlist" element={<></>}></Route>
         <Route path="/add" element={<Add></Add>}></Route>
+        <Route path="/playlist" element={<></>}></Route>
+        <Route path="/player" element={<Player></Player>}></Route>
       </Routes>
     </div>
   );

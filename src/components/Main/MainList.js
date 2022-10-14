@@ -1,11 +1,11 @@
-import Track from "./Track";
+import Track from "../common/Track";
 
-function List(props) {
+function MainList(props) {
   return (
     <>
       {/* <h3>{props.list[9]?.title}</h3> */}
       <div className="list">
-        <h1>Playlist Name</h1>
+        <h1>Weekly New Songs</h1>
         <div className="row">
           {/*TODO: map으로 반복문 돌리기 */}
           {props.list.map((track, i) => {
@@ -18,4 +18,4 @@ function List(props) {
   );
 }
 
-export default List;
+export default MainList;

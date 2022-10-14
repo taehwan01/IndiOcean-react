@@ -1,4 +1,4 @@
-import List from "../components/List";
+import MainList from "../components/Main/MainList";
 import "../css/Main/Main.css";
 
 function Main(props) {
@@ -14,7 +14,7 @@ function Main(props) {
         </div>
       </div>
       <div className="main2">
-        <List list={props.list}></List>
+        <MainList list={props.list}></MainList>
       </div>
     </div>
   );
