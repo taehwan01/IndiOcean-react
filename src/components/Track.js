@@ -1,9 +1,10 @@
 function Track(props) {
   return (
     <>
-      {/* {process.env.HELLO} */}
       <div className="track col-2">
-        <div className="track-box">{props.track.cover_image}</div>
+        <div className="track-box">
+          <img src={`${process.env.REACT_APP_URL}/track/list/uploads/image/${props.track.cover_image}`} className="track-img" alt="" />
+        </div>
         <br />
         <div className="track-info">
           <h5 className="title">{props.track.title}</h5>
