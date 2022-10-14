@@ -3,7 +3,7 @@ function AddTrack(props) {
     <>
       <div className="track">
         <div className="track-box">
-          <img src={props.cover} className="image-add" />
+          <img src={props.cover} className="image-add" alt="" />
         </div>
         <br />
         <div className="track-info">

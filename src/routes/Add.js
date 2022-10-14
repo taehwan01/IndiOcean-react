@@ -1,7 +1,7 @@
 import "../css/Add.css";
 import AddTrack from "../components/AddTrack";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function Add() {
   let [title, setTitle] = useState("Track Name");

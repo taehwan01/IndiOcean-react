@@ -15,8 +15,6 @@ function Main(props) {
       </div>
       <div className="main2">
         <List list={props.list}></List>
-        {/* <List></List>
-        <List></List> */}
       </div>
     </div>
   );
