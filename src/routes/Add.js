@@ -1,5 +1,5 @@
-import "../css/Add.css";
-import AddTrack from "../components/AddTrack";
+import "../css/Add/Add.css";
+import AddTrack from "../components/Add/AddTrack";
 
 import { useState } from "react";
 

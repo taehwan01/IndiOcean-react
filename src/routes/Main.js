@@ -1,5 +1,5 @@
 import List from "../components/List";
-import "../css/Main.css";
+import "../css/Main/Main.css";
 
 function Main(props) {
   return (
