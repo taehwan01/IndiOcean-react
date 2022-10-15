@@ -14,7 +14,9 @@ function MusicPlayer() {
             <h7>Joji</h7>
           </div>
           <div className="player-timer">
+            00:00
             <input type="range" className="player-range" />
+            03:41
           </div>
           <div className="player-buttons">
             <FontAwesomeIcon icon={solid("shuffle")} className="player-button-2" />

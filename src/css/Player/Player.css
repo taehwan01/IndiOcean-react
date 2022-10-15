@@ -2,7 +2,6 @@
   background-color: #3e5454;
   color: white;
   padding: 20px 70px 0 130px;
-  text-shadow: 0 0 2px white;
 }
 
 .player-track {
@@ -23,6 +22,7 @@
 
 .playerlist-info {
   margin: auto 0;
+  text-shadow: 0 0 1.4px white;
 }
 
 .music-player {
@@ -43,15 +43,32 @@
 }
 
 .player-info {
+  text-shadow: 0 0 2px white;
   margin-top: 15px;
 }
 
 .player-timer {
-  margin: 12px 0 15px;
+  margin: 12px 0 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .player-range {
-  width: 60%;
+  margin: 0 15px;
+  -webkit-appearance: none;
+  background-color: white;
+  width: 50%;
+  height: 1px;
+  box-shadow: 0px 0px 5px white;
+}
+.player-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border-radius: 100%;
+  box-shadow: 0px 0px 5px white;
 }
 
 .player-buttons {
@@ -63,11 +80,25 @@
 .player-button {
   font-size: 1.7rem;
   padding: 0 35px;
+  opacity: 0.7;
+  filter: drop-shadow(0px 0px 1px white);
+  transition-duration: 1s;
+}
+.player-button:hover {
+  opacity: 1;
   filter: drop-shadow(0px 0px 2px white);
+  transition-duration: 0.2s;
 }
 
 .player-button-2 {
   font-size: 1.3rem;
   padding: 0 20px;
+  opacity: 0.4;
+  filter: drop-shadow(0px 0px 1px white);
+  transition-duration: 1s;
+}
+.player-button-2:hover {
+  opacity: 1;
   filter: drop-shadow(0px 0px 2px white);
+  transition-duration: 0.2s;
 }

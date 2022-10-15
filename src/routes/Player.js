@@ -6,7 +6,7 @@ function Player() {
   return (
     <div className="player">
       <div style={{ marginBottom: "35px" }}>
-        <h2>Player</h2>
+        <h2 style={{ textShadow: "0 0 3px white" }}>Weekly New Songs</h2>
       </div>
       <div className="row">
         <div className="col-6">
