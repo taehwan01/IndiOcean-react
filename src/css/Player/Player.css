@@ -1,3 +1,73 @@
 .player {
-  padding: 30px 70px 0 70px;
+  background-color: #3e5454;
+  color: white;
+  padding: 20px 70px 0 130px;
+  text-shadow: 0 0 2px white;
+}
+
+.player-track {
+  /* margin-top: 0px; */
+}
+
+.playerlist-cover {
+  /* padding-right: rem; */
+  text-align: center;
+}
+
+.playerlist-cover-img {
+  width: 60px;
+  height: 60px;
+  border: solid 1px #87aaaa;
+  box-shadow: 0px 0px 10px #87aaaa;
+}
+
+.playerlist-info {
+  margin: auto 0;
+}
+
+.music-player {
+  margin: auto;
+  text-align: center;
+}
+
+.player-cover {
+  border-radius: 50px;
+}
+
+.player-cover-img {
+  width: 370px;
+  height: 370px;
+  border: solid 2px #87aaaa;
+  box-shadow: 0px 0px 100px #87aaaa;
+  /* border-radius: 100%; */
+}
+
+.player-info {
+  margin-top: 15px;
+}
+
+.player-timer {
+  margin: 12px 0 15px;
+}
+
+.player-range {
+  width: 60%;
+}
+
+.player-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-button {
+  font-size: 1.7rem;
+  padding: 0 35px;
+  filter: drop-shadow(0px 0px 2px white);
+}
+
+.player-button-2 {
+  font-size: 1.3rem;
+  padding: 0 20px;
+  filter: drop-shadow(0px 0px 2px white);
 }
