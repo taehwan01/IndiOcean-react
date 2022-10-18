@@ -1,7 +1,24 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 import MainList from "../components/Main/MainList";
 import "../css/Main/Main.css";
 
-function Main(props) {
+function Main() {
+  let [list, setList] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/track/list")
+      .then((results) => {
+        console.log(results.data);
+        setList(results.data);
+      })
+      .catch((e) => {
+        console.log("Failed ~/track/list\n", e);
+      });
+  }, []);
+
   return (
     <div>
       <div className="main">
@@ -14,7 +31,7 @@ function Main(props) {
         </div>
       </div>
       <div className="main2">
-        <MainList list={props.list}></MainList>
+        <MainList list={list}></MainList>
       </div>
     </div>
   );

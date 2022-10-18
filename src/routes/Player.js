@@ -1,8 +1,25 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 import "../css/Player/Player.css";
 import PlayerTrack from "../components/Player/PlayerTrack";
 import MusicPlayer from "../components/Player/MusicPlayer";
 
 function Player() {
+  let [list, setList] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/track/list")
+      .then((results) => {
+        console.log(results.data);
+        setList(results.data);
+      })
+      .catch((e) => {
+        console.log("Failed ~/track/list\n", e);
+      });
+  }, []);
+
   return (
     <div className="player">
       <div style={{ marginBottom: "35px" }}>
@@ -10,12 +27,9 @@ function Player() {
       </div>
       <div className="row">
         <div className="col-6">
-          <PlayerTrack></PlayerTrack>
-          <PlayerTrack></PlayerTrack>
-          <PlayerTrack></PlayerTrack>
-          <PlayerTrack></PlayerTrack>
-          <PlayerTrack></PlayerTrack>
-          <PlayerTrack></PlayerTrack>
+          {list.map((track, i) => {
+            return <PlayerTrack track={track}></PlayerTrack>;
+          })}
         </div>
         <div className="col-6">
           <MusicPlayer></MusicPlayer>

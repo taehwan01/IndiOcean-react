@@ -1,8 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
-import { useEffect, useState } from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import axios from "axios";
 
 import "./css/App.css";
 import Main from "./routes/Main";
@@ -11,19 +9,6 @@ import Player from "./routes/Player";
 
 function App() {
   let navigate = useNavigate();
-  let [list, setList] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:8080/track/list")
-      .then((results) => {
-        console.log(results.data);
-        setList(results.data);
-      })
-      .catch((e) => {
-        console.log("Failed ~/track/list\n", e);
-      });
-  }, []);
 
   return (
     <div style={{ backgroundColor: "#e9e9e9" }}>
@@ -55,7 +40,7 @@ function App() {
         </Navbar>
       </div>
       <Routes>
-        <Route path="/" element={<Main list={list}></Main>}></Route>
+        <Route path="/" element={<Main></Main>}></Route>
         <Route path="/add" element={<Add></Add>}></Route>
         <Route path="/playlist" element={<></>}></Route>
         <Route path="/player" element={<Player></Player>}></Route>
