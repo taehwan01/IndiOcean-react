@@ -24,28 +24,6 @@ body {
   opacity: 1;
 }
 
-.main {
-  color: white;
-  background-color: #87aaaa;
-  /* margin-left: 70px;
-  margin-right: 70px; */
-}
-
-.main-text {
-  margin: auto 0px auto 70px;
-}
-
-.wave-img {
-  position: relative;
-  margin-left: 132px;
-  align-items: right;
-  /* TODO: 사진 오른쪽에 붙게 */
-  /* background: linear-gradient(transparent, transparent, transparent), url("./img/wave.png"); */
-  background-image: linear-gradient(to right, #87aaaa, transparent), url("../img/wave.png");
-  width: 640px;
-  height: 400px;
-}
-
 /* Track.css */
 
 .track {
