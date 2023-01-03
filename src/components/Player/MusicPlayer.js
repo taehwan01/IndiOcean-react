@@ -1,23 +1,14 @@
-import { useRef, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { solid, regular, brands, icon } from "@fortawesome/fontawesome-svg-core/import.macro"; // <-- import styles to be used
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'; // <-- import styles to be used
 
 function MusicPlayer() {
   let audioElem, tracks;
   let [isPlaying, setIsPlaying] = useState(false);
   let [currentSong, setCurrentSong] = useState();
-  const clickRef = useRef();
 
   const playPause = () => {
     setIsPlaying(!isPlaying);
-  };
-
-  const checkWidth = (e) => {
-    let width = clickRef.current.clientWidth;
-    const offset = e.nativeEvent.offsetX;
-
-    const divprogress = (offset / width) * 100;
-    audioElem.current.currentTime = (divprogress / 100) * currentSong.length;
   };
 
   const skipToPrevious = () => {
@@ -41,59 +32,56 @@ function MusicPlayer() {
     audioElem.current.currentTime = 0;
   };
 
-  const shuffle = () => {};
-  const rotate = () => {};
-
   return (
     <>
-      <div className="music-player">
-        <div className="player-cover">
-          <img src={require("../../img/wave.png")} className="player-cover-img" alt="" />
+      <div className='music-player'>
+        <div className='player-cover'>
+          <img src={require('../../img/wave.png')} className='player-cover-img' alt='' />
         </div>
-        <div className="player-info">
-          <div className="player-track-info">
-            <h4 style={{ marginBottom: "0" }}>A Glimpse Of Us</h4>
+        <div className='player-info'>
+          <div className='player-track-info'>
+            <h4 style={{ marginBottom: '0' }}>A Glimpse Of Us</h4>
             <h7>Joji</h7>
           </div>
-          <div className="player-timer">
+          <div className='player-timer'>
             00:00
-            <input type="range" className="player-range" />
+            <input type='range' className='player-range' />
             03:41
           </div>
-          <div className="player-buttons">
-            <FontAwesomeIcon icon={solid("shuffle")} className="player-button-2" />
+          <div className='player-buttons'>
+            <FontAwesomeIcon icon={solid('shuffle')} className='player-button-2' />
             <FontAwesomeIcon
-              icon={solid("angles-left")}
+              icon={solid('angles-left')}
               onClick={() => {
                 skipToPrevious();
               }}
-              className="player-button"
+              className='player-button'
             />
             {isPlaying ? (
               <FontAwesomeIcon
-                icon={solid("pause")}
+                icon={solid('pause')}
                 onClick={() => {
                   playPause();
                 }}
-                className="play-button"
+                className='play-button'
               />
             ) : (
               <FontAwesomeIcon
-                icon={solid("play")}
+                icon={solid('play')}
                 onClick={() => {
                   playPause();
                 }}
-                className="pause-button"
+                className='pause-button'
               />
             )}
             <FontAwesomeIcon
-              icon={solid("angles-right")}
+              icon={solid('angles-right')}
               onClick={() => {
                 skipToNext();
               }}
-              className="player-button"
+              className='player-button'
             />
-            <FontAwesomeIcon icon={solid("rotate-right")} className="player-button-2" />
+            <FontAwesomeIcon icon={solid('rotate-right')} className='player-button-2' />
           </div>
         </div>
       </div>
