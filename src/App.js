@@ -36,6 +36,22 @@ function App() {
               >
                 Add
               </Nav.Link>
+              <Nav.Link
+                className='navimenu'
+                onClick={() => {
+                  navigate('/playlist');
+                }}
+              >
+                Playlist
+              </Nav.Link>
+              <Nav.Link
+                className='navimenu'
+                onClick={() => {
+                  navigate('/player');
+                }}
+              >
+                Player
+              </Nav.Link>
             </Nav>
           </Container>
         </Navbar>
