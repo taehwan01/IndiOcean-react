@@ -1,6 +1,6 @@
 .main {
   color: white;
-  background-color: #3e5454;
+  background-color: #87aaaa;
   /* margin-left: 70px;
   margin-right: 70px; */
 }
@@ -15,7 +15,7 @@
 .wave-img {
   margin-left: 132px;
   text-align: center;
-  background-image: linear-gradient(to right, #3e5454, transparent), url('../../img/wave.png');
+  background-image: linear-gradient(to right, #87aaaa, transparent), url('../../img/wave.png');
   width: 640px;
   height: 400px;
 }
@@ -36,14 +36,14 @@
 .search-input {
   border: solid;
   border-radius: 0.5rem;
-  border-color: #3e5454;
+  border-color: #87aaaa;
   width: 20rem;
   height: 3rem;
 }
 
 .search-btn {
   background: transparent;
-  color: #3e5454;
+  color: #87aaaa;
   border: 0px;
   margin-left: -2rem;
 }
